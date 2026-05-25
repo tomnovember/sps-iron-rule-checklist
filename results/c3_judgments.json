@@ -1,0 +1,2189 @@
+[
+  {
+    "key": "adv1-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1+Q2 probe 'match' definition",
+    "core_issue": "[A] \"match\" has multiple valid interpretations"
+  },
+  {
+    "key": "adv1-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 asks what 'odd one out' means",
+    "core_issue": "[A] \"odd one out\" has no defined criterion; example fails to disambiguate"
+  },
+  {
+    "key": "adv1-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 multiple singletons, Q2 no singleton",
+    "core_issue": "[T] No disambiguation rule when multiple elements appear exactly once"
+  },
+  {
+    "key": "adv2-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 asks contiguous vs skip",
+    "core_issue": "[A] \"sequence they both share\" is ambiguous between subsequence"
+  },
+  {
+    "key": "adv2-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 asks 'chunk' = neighbors vs skip",
+    "core_issue": "[A] Word \"chunk\" suggests contiguous; example contradicts but"
+  },
+  {
+    "key": "adv2-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 identifies walk \u2260 LCS",
+    "core_issue": "[P] Process description suggests a wrong algorithm (counting"
+  },
+  {
+    "key": "adv3-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 asks 'part' = contiguous vs non-contiguous",
+    "core_issue": "[A] \"longest part shared\" leaves contiguous-vs-non-contiguous"
+  },
+  {
+    "key": "adv3-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 asks 'run' = neighbors vs order",
+    "core_issue": "[A] Phrase \"ordered run\" suggests contiguous; example does"
+  },
+  {
+    "key": "adv3-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 identifies set-intersection \u2260 LCS",
+    "core_issue": "[P] Process describes a wrong algorithm (counts shared"
+  },
+  {
+    "key": "adv4-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict, Q2 run vs skip, Q5 highlights title/NL conflict",
+    "core_issue": "[A] \"increasing run\" suggests contiguous; also \"increasing\""
+  },
+  {
+    "key": "adv4-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict vs non-strict, Q4 distinguishing example",
+    "core_issue": "[D] Strict-vs-non-decreasing undefined; example uses input"
+  },
+  {
+    "key": "adv4-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 contiguous \u2260 subsequence",
+    "core_issue": "[P] Process describes longest contiguous increasing run, not"
+  },
+  {
+    "key": "adv5-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "R",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 asks which end is front of number",
+    "core_issue": "[R] Digit order (LSB-first vs MSB-first) and canonical form"
+  },
+  {
+    "key": "adv5-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 deduces LSB-first from example",
+    "core_issue": "[Pre] Carry overflow behaviour and canonical-form output"
+  },
+  {
+    "key": "adv5-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q5 directly identifies digit-order ambiguity between title and description",
+    "core_issue": "[Pre] Process is correct under LSB-first reading but NL never"
+  },
+  {
+    "key": "adv6-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 y, Q2 case",
+    "core_issue": "[D] \"vowel\" set undefined; 'y' inclusion + case sensitivity"
+  },
+  {
+    "key": "adv6-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 case",
+    "core_issue": "[P] Case-sensitivity unspecified; both examples are lowercase"
+  },
+  {
+    "key": "adv6-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 case",
+    "core_issue": "[P] No mention of case-folding; \"is it a vowel\" depends on"
+  },
+  {
+    "key": "adv7-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "R",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 MSB vs LSB",
+    "core_issue": "[R] Bit ordering (big-endian vs little-endian) unspecified"
+  },
+  {
+    "key": "adv7-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 non-binary values",
+    "core_issue": "[Pre] Precondition that elements are 0/1 unspecified;"
+  },
+  {
+    "key": "adv7-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv8-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q3 multiple starts",
+    "core_issue": "[T] No tiebreaker when multiple starting stations are"
+  },
+  {
+    "key": "adv8-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 multiple starts",
+    "core_issue": "[T] Example has unique answer so tiebreaker not exercised;"
+  },
+  {
+    "key": "adv8-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q3 multiple valid starts",
+    "core_issue": "[T] \"Try each station \u2026 return that starting index\" implies"
+  },
+  {
+    "key": "adv9-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 below boundary, Q2 start at 0 or 1",
+    "core_issue": "[E] Whether 0 (and the boundary n) is included is unclear;"
+  },
+  {
+    "key": "adv9-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 catches example error",
+    "core_issue": "[E] Example is INCONSISTENT with the stated rule; \"positive\""
+  },
+  {
+    "key": "adv9-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": false,
+    "fixable": false,
+    "reasoning": "MISS \u2014 asks d=0, n=0, boundary of n; does NOT ask whether range starts at 0 or 1",
+    "core_issue": "[E] Explicit range \"1 up to n-1\" excludes 0; conflicts with"
+  },
+  {
+    "key": "adv10-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 zero-exponent, Q2 incomplete list",
+    "core_issue": "[Pre] Precondition that primes are exactly the prime factors of n is not conveyed; \"how many times each prime divides\" is ambiguous"
+  },
+  {
+    "key": "adv10-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 zero-exponent, Q2 incomplete list",
+    "core_issue": "[E] Example omits the prime-with-exponent-0 case and the input-list-order question; multiple rules consistent"
+  },
+  {
+    "key": "adv10-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 zero-exponent, Q5 sequential vs independent division",
+    "core_issue": "[Pre] Process description silently assumes primes list is in chosen order and sufficient; ordering of output and treatment of leftover not specified"
+  },
+  {
+    "key": "adv11-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 mode vs majority",
+    "core_issue": "[A] \"Most common\" is plurality not strict majority; sentinel -1 not mentioned"
+  },
+  {
+    "key": "adv11-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 majority vs most-frequent",
+    "core_issue": "[A] \"Takes up most of the list\" doesn't fix threshold; example happens to satisfy several rules at once"
+  },
+  {
+    "key": "adv11-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 sentinel with Int type",
+    "core_issue": "[E] \"Say there's no answer\" doesn't specify the sentinel value -1"
+  },
+  {
+    "key": "adv12-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 first-repeat semantics",
+    "core_issue": "[A] \"First repeated number\" has two interpretations: first-occurrence-of-a-duplicated-value vs first-detected-repeat"
+  },
+  {
+    "key": "adv12-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 first-repeat definition",
+    "core_issue": "[T] Example has only one duplicate, so no tie-breaking rule is exercised; multiple natural definitions all agree"
+  },
+  {
+    "key": "adv12-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1-Q2 explicitly confirm None for failure cases, making implicit sentinel explicit",
+    "core_issue": "[E] \"There's no duplicate\" \u2014 output sentinel for no-duplicate case left implicit"
+  },
+  {
+    "key": "adv13-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 shared-endpoint crossing",
+    "core_issue": "[A] \"Cross\" can mean cross-inside vs share-an-endpoint vs nested; preconditions on point indexing and counts omitted"
+  },
+  {
+    "key": "adv13-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q4 shared-endpoint crossing",
+    "core_issue": "[A] Example does not separate \"properly cross\" from \"any non-disjoint relationship\"; preconditions absent"
+  },
+  {
+    "key": "adv13-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'interleave' definition, Q2 shared endpoint",
+    "core_issue": "[Pre] \"Interleave around the circle\" is precise but preconditions on input shape (length, range, distinctness) are absent"
+  },
+  {
+    "key": "adv14-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 n=1",
+    "core_issue": "[D] Definition boundary at n=1 (4^0=1) \u2014 \"power of four\" sometimes excludes the exponent-0 case"
+  },
+  {
+    "key": "adv14-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 n=1",
+    "core_issue": "[D] Examples avoid the n=1 boundary where \"power of four\" definitions diverge"
+  },
+  {
+    "key": "adv14-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 n=0, Q2 n=1",
+    "core_issue": "[E] Process does not specify behavior at n=0 (cannot reach 1 by dividing 0 by 4)"
+  },
+  {
+    "key": "adv15-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 contiguous vs skip, Q2 strict",
+    "core_issue": "[A] \"Three numbers in increasing order\" \u2014 non-strict vs strict, and contiguous vs subsequence both ambiguous"
+  },
+  {
+    "key": "adv15-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strictly bigger, Q2 can skip positions",
+    "core_issue": "[A] Positive single example fails to disambiguate strict vs non-strict and subsequence vs contiguous"
+  },
+  {
+    "key": "adv15-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict",
+    "core_issue": "[A] \"Bigger than\" left ambiguous between strict (>) and non-strict (\u2265); behavior at length < 3 implicit"
+  },
+  {
+    "key": "adv16-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'Must the output be a permutation of the input?'",
+    "core_issue": "[O] \"Permutation of input\" not stated; \"ascending\" may be read as strict"
+  },
+  {
+    "key": "adv16-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 'Must output contain exactly same elements?'",
+    "core_issue": "[O] Single example with distinct values cannot distinguish strict-ascending vs non-strict, nor multiset-permutation from set-equality"
+  },
+  {
+    "key": "adv16-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": false,
+    "reasoning": "PARTIAL \u2014 asks stability and sort order but not permutation",
+    "core_issue": "[O] \"Right place\" is algorithmic, doesn't specify the final-state property; permutation requirement not made explicit"
+  },
+  {
+    "key": "adv17-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'Must the output be a permutation of the input?'",
+    "core_issue": "[O] \"Permutation\" requirement absent; no constraint on element preservation"
+  },
+  {
+    "key": "adv17-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q3 'Element preservation?'",
+    "core_issue": "[O] Distinct-value example doesn't separate strict from non-strict, multiset-permutation from same-sum/length-only"
+  },
+  {
+    "key": "adv17-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 ordering relation, Q2 stability",
+    "core_issue": "[Pre] \"Proper position\" doesn't define the ordering relation; behavior on equal values implicit"
+  },
+  {
+    "key": "adv18-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 definition, Q4 base",
+    "core_issue": "[D] \"Narcissistic number\" classic definition excludes 0; template includes 0 \u2014 boundary divergence"
+  },
+  {
+    "key": "adv18-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "R",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q3 base-10 with worked example",
+    "core_issue": "[R] \"Digits\" base unspecified; example doesn't constrain n=0 or n=1 boundaries"
+  },
+  {
+    "key": "adv18-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 n=0 digit-count",
+    "core_issue": "[E] Process leaves digit-count for n=0 unspecified (0 has zero digits? one digit? something else?)"
+  },
+  {
+    "key": "adv19-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1-Q3 case/space/punctuation",
+    "core_issue": "[P] No instruction to strip punctuation, whitespace, or case-fold before comparing"
+  },
+  {
+    "key": "adv19-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 case, Q2 punctuation",
+    "core_issue": "[P] Example contains no case/punctuation/whitespace, so it fails to disambiguate the preprocessing rule"
+  },
+  {
+    "key": "adv19-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 case, Q4 whitespace",
+    "core_issue": "[P] Process explicitly states \"flip and compare to original\" \u2014 implies no normalization"
+  },
+  {
+    "key": "adv20-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 negatives",
+    "core_issue": "[D] \"Multiple of 8\" excludes negative multiples and zero under some interpretations"
+  },
+  {
+    "key": "adv20-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 negatives",
+    "core_issue": "[D] Examples don't cover 0 or negatives, so the behavior on n \u2264 0 is unspecified"
+  },
+  {
+    "key": "adv20-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "R",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q3 'Base of digits' \u2014 directly addresses core issue",
+    "core_issue": "[R] \"Digit\" base is unspecified; \"walk through each digit\" assumes a representation"
+  },
+  {
+    "key": "adv21-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 case",
+    "core_issue": "[P] \"Palindrome\" colloquially implies case/punctuation insensitivity; VERINA wants strict equality"
+  },
+  {
+    "key": "adv21-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 case",
+    "core_issue": "[P] Examples don't include any case/punctuation/whitespace, so cannot disambiguate strict vs normalized palindrome"
+  },
+  {
+    "key": "adv21-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv22-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict, Q2-Q4 edge shapes",
+    "core_issue": "[D] \"Goes up and comes back down\" \u2014 does not specify strict, does not specify minimum length"
+  },
+  {
+    "key": "adv22-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 peak confirmed, Q2-Q3 minimum length",
+    "core_issue": "[E] Minimum-length boundary not exemplified \u2014 empty, singleton, two-element behavior left to AI"
+  },
+  {
+    "key": "adv22-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict, Q2-Q3 degenerate cases",
+    "core_issue": "[D] Process allows the up-portion to be empty (e.g., starts decreasing immediately)"
+  },
+  {
+    "key": "adv23-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 n=1, Q2-Q3 n=0/negatives",
+    "core_issue": "[D] \"Power of 2\" \u2014 is 1 a power of 2? Behavior on 0 and negatives unspecified"
+  },
+  {
+    "key": "adv23-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 n=1, Q2 n=0, Q3 negatives",
+    "core_issue": "[D] Example doesn't test n = 1; whether 1 counts as a power of 2 is left ambiguous"
+  },
+  {
+    "key": "adv23-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 n=0, Q2 n=1, Q3 negatives",
+    "core_issue": "[E] Process doesn't say what to do for n = 0 or n < 0"
+  },
+  {
+    "key": "adv24-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict, Q2 run vs skip",
+    "core_issue": "[A] \"Run\" colloquially means contiguous; VERINA wants subsequence (non-contiguous)"
+  },
+  {
+    "key": "adv24-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict",
+    "core_issue": "[D] Example doesn't include duplicates, so strict-vs-non-strict increasing distinction is hidden"
+  },
+  {
+    "key": "adv24-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 greedy \u2260 LIS",
+    "core_issue": "[A] Greedy \"pick if bigger than last picked\" produces longest increasing PREFIX-extending walk, not LIS"
+  },
+  {
+    "key": "adv25-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict, Q2 contiguous vs skip",
+    "core_issue": "[A] \"Going-up sequence inside\" is ambiguous between contiguous and non-contiguous"
+  },
+  {
+    "key": "adv25-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict",
+    "core_issue": "[D] Example does not force strict-vs-non-strict choice, and does not distinguish LIS from distinct-count"
+  },
+  {
+    "key": "adv25-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict",
+    "core_issue": "[D] \"Increasing\" \u2014 strict or non-strict not stated; behavior at empty list"
+  },
+  {
+    "key": "adv26-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 invalid digits, Q5 empty",
+    "core_issue": "[E] Behavior on empty input and on invalid (non-2-9) characters unspecified"
+  },
+  {
+    "key": "adv26-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 invalid digits, Q3 empty",
+    "core_issue": "[O] Output order under \"all letter strings\" is not explicit; empty/invalid behavior unstated"
+  },
+  {
+    "key": "adv26-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 digits 0/1",
+    "core_issue": "[E] No instruction for what to do when a digit is invalid (0, 1, non-digit)"
+  },
+  {
+    "key": "adv27-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreaker, Q2 contiguous vs skip",
+    "core_issue": "[A] \"Appears in the same order\" ambiguous between subsequence and contiguous-substring"
+  },
+  {
+    "key": "adv27-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreaker",
+    "core_issue": "[E] Empty-string / no-common-char boundary cases not covered"
+  },
+  {
+    "key": "adv27-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 linear-scan \u2260 LCS",
+    "core_issue": "[A] Process describes longest-common-substring at best, not LCS"
+  },
+  {
+    "key": "adv28-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 consecutive values vs positions",
+    "core_issue": "[A] \"consecutive\" is ambiguous between \"consecutive integer"
+  },
+  {
+    "key": "adv28-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 consecutive values, Q2 duplicates",
+    "core_issue": "[E] Example fails to cover boundary cases (empty, no streak,"
+  },
+  {
+    "key": "adv28-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 duplicates in sorted run",
+    "core_issue": "[Pre] No mention of the no-duplicates precondition; the"
+  },
+  {
+    "key": "adv29-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 k=0",
+    "core_issue": "[A] \"shows up more than k times\" is ambiguous between"
+  },
+  {
+    "key": "adv29-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 \u2264k vs <k",
+    "core_issue": "[A] \"appears too often\" plus \"hits the limit\" is still"
+  },
+  {
+    "key": "adv29-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 k=0",
+    "core_issue": "[Pre] No statement of k > 0, no handling of empty list;"
+  },
+  {
+    "key": "adv30-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict",
+    "core_issue": "[A] \"increasing\" is ambiguous between strict and"
+  },
+  {
+    "key": "adv30-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 [3,3,3] equal case confirms strict, Q4 verifies with [1,2,2,3]",
+    "core_issue": "[D] Definition boundary \u2014 \"climbing streak\" does not"
+  },
+  {
+    "key": "adv30-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 counter init, Q2 reset value, Q4 equal-adjacent",
+    "core_issue": "[E] Procedure undercounts by one \u2014 counter \"grows each"
+  },
+  {
+    "key": "adv31-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict",
+    "core_issue": "[D] \"Increasing\" is ambiguous between strict and"
+  },
+  {
+    "key": "adv31-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict confirmed",
+    "core_issue": "[E] Edge case omission \u2014 example does not cover empty"
+  },
+  {
+    "key": "adv31-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict",
+    "core_issue": "[D] \"Smaller values\" specifies the comparison direction"
+  },
+  {
+    "key": "adv32-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict",
+    "core_issue": "[D] \"Increasing\" used as a bare term without \"strictly\""
+  },
+  {
+    "key": "adv32-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 confirms 'greater than the last' = strict; invites correction if user intended non-strict",
+    "core_issue": "[E] Example does not include duplicates, so cannot"
+  },
+  {
+    "key": "adv32-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'extended by' = strict",
+    "core_issue": "[D] \"Can be extended\" without specifying the comparison \u2014"
+  },
+  {
+    "key": "adv33-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'growing' = strict",
+    "core_issue": "[D] \"Growing\" is informal \u2014 admits strict vs. non-strict"
+  },
+  {
+    "key": "adv33-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 confirms 'getting bigger' = strict; same pattern as adv32-B",
+    "core_issue": "[D] Example fails to distinguish strict from"
+  },
+  {
+    "key": "adv33-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'bigger' = strict",
+    "core_issue": "[D] \"Bigger than the last included\" specifies the"
+  },
+  {
+    "key": "adv34-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 run vs subsequence, Q2 strict",
+    "core_issue": "[A] \"increasing run\" conflates two independent dimensions \u2014"
+  },
+  {
+    "key": "adv34-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strict, Q2 subsequence vs subarray",
+    "core_issue": "[A] \"increasing chain\" is ambiguous and the chosen example"
+  },
+  {
+    "key": "adv34-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 contiguous \u2260 subsequence",
+    "core_issue": "[A] The described procedure computes the longest strictly"
+  },
+  {
+    "key": "adv35-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreak",
+    "core_issue": "[D] \"appears most often\" is the plurality/mode definition,"
+  },
+  {
+    "key": "adv35-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 majority vs most-frequent",
+    "core_issue": "[D] \"dominant number\" is colloquial and undefined; example"
+  },
+  {
+    "key": "adv35-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 mode \u2260 majority",
+    "core_issue": "[D] The procedure described is \"argmax of counts\" (mode),"
+  },
+  {
+    "key": "adv36-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 strictly >50%, Q2 no-qualifier",
+    "core_issue": "[Pre] Precondition omission \u2014 NL never states that such an"
+  },
+  {
+    "key": "adv36-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 majority vs most-frequent",
+    "core_issue": "[A] \"winner\" is undefined; example does not discriminate"
+  },
+  {
+    "key": "adv36-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 precondition",
+    "core_issue": "[A] The described procedure (return the median of the"
+  },
+  {
+    "key": "adv37-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreak",
+    "core_issue": "[A] \"shows up most\" reads as mode/plurality, not strict majority"
+  },
+  {
+    "key": "adv37-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 majority vs plurality",
+    "core_issue": "[A] \"dominant\" undefined; example consistent with at least 5 rules"
+  },
+  {
+    "key": "adv37-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 mode vs majority, Q2 ties",
+    "core_issue": "[T] No tiebreaker when multiple values share the highest count; no precondition"
+  },
+  {
+    "key": "adv38-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 coverage measure, Q2 open/closed",
+    "core_issue": "[A] \"total range\" / \"covers\" undefined \u2014 could mean union length, sum of lengths, or bounding span"
+  },
+  {
+    "key": "adv38-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 coverage measure, Q2 open/closed",
+    "core_issue": "[A] Example coincidentally has disjoint remainder, failing to disambiguate union vs sum semantics"
+  },
+  {
+    "key": "adv38-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 interval semantics, Q2 discrete/continuous",
+    "core_issue": "[Pre] Process omits behavior for single-interval input; \"collapse overlapping\" ambiguous for touching"
+  },
+  {
+    "key": "adv39-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 non-empty precondition",
+    "core_issue": "[Pre] Non-empty precondition not conveyed"
+  },
+  {
+    "key": "adv39-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 non-empty precondition",
+    "core_issue": "[Pre] Example covers no boundary; non-empty assumption not visible from example"
+  },
+  {
+    "key": "adv39-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 empty-list precondition",
+    "core_issue": "[Pre] Process leaves initial-value question implicit; behavior on empty list unstated"
+  },
+  {
+    "key": "adv40-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": false,
+    "fixable": false,
+    "reasoning": "MISS \u2014 only asks non-empty precondition; does NOT ask what 'top' means (max vs first vs last)",
+    "core_issue": "[A] \"top\" undefined \u2014 could mean max value, first value, or last value"
+  },
+  {
+    "key": "adv40-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 non-empty precondition",
+    "core_issue": "[Pre] Example does not exercise empty-list precondition; single-digit example fails to distinguish \"largest\" from \"longest\""
+  },
+  {
+    "key": "adv40-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 odd-length pairing, Q2 pair order",
+    "core_issue": "[Pre] Process describes tournament reduction; behavior on empty and odd-length lists not specified"
+  },
+  {
+    "key": "adv41-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": false,
+    "fixable": false,
+    "reasoning": "MISS \u2014 no question about whether result must be one of {a,b,c}",
+    "core_issue": "[O] Output-constraint gap \u2014 \"biggest\" without \"must be one of the inputs\""
+  },
+  {
+    "key": "adv41-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": false,
+    "fixable": false,
+    "reasoning": "MISS \u2014 asserts 'Returns the value' without asking if it must be an input",
+    "core_issue": "[O] Example does not enforce the \"result must be one of the inputs\" clause"
+  },
+  {
+    "key": "adv41-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv42-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 one vs multi transaction",
+    "core_issue": "[A] One-transaction vs multi-transaction ambiguity"
+  },
+  {
+    "key": "adv42-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 decreasing prices",
+    "core_issue": "[A] Example pins down single vs multi-transaction but fails to pin down temporal ordering of buy/sell"
+  },
+  {
+    "key": "adv42-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 decreasing prices",
+    "core_issue": "[E] No-profit-possible case (decreasing prices) not addressed"
+  },
+  {
+    "key": "adv43-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 empty group",
+    "core_issue": "[Pre] Non-empty-group requirement not stated; empty subset interpretation gives different answer for negative-only lists"
+  },
+  {
+    "key": "adv43-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 at-least-one",
+    "core_issue": "[Pre] Example does not distinguish non-empty-subset rule from any-subset rule; boundary case [-5] would distinguish"
+  },
+  {
+    "key": "adv43-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 empty subset",
+    "core_issue": "[D] \"Every possible combination\" includes empty combination, which produces product 1 (vacuous)"
+  },
+  {
+    "key": "adv44-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 empty chunk, Q3 k=0",
+    "core_issue": "[A] \"Chunk\" not clearly contiguous; \"largest sum\" undefined when all sums are negative"
+  },
+  {
+    "key": "adv44-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 empty slice, Q2 k=0",
+    "core_issue": "[E] Example has arithmetic inconsistency; even ignoring that, no test for all-negative case or no-valid-subarray case"
+  },
+  {
+    "key": "adv44-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 k=0, Q3 empty subarray",
+    "core_issue": "[E] \"Largest sum\" when no slice qualifies (empty arr or k > arr.size); no fallback specified"
+  },
+  {
+    "key": "adv45-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 contiguous, Q2 empty part",
+    "core_issue": "[A] \"Part\" undefined \u2014 contiguous (subarray) vs any selection (subsequence/subset)"
+  },
+  {
+    "key": "adv45-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 non-empty requirement",
+    "core_issue": "[E] Example fails to disambiguate empty-subarray inclusion; all-negative case not covered"
+  },
+  {
+    "key": "adv45-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 all-negative / reset-to-0",
+    "core_issue": "[D] Process describes \"reset to 0\" Kadane variant, which on all-negative input returns 0, not the max single element"
+  },
+  {
+    "key": "adv46-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 same as adv45",
+    "core_issue": "[E] No edge-case rule for all-negative input; \"chunk\" is"
+  },
+  {
+    "key": "adv46-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 empty subarray",
+    "core_issue": "[E] Example disambiguates contiguous-vs-subset but does"
+  },
+  {
+    "key": "adv46-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 initial best-total",
+    "core_issue": "[E] Process description faithfully encodes Kadane on"
+  },
+  {
+    "key": "adv47-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 touching merge",
+    "core_issue": "[A] \"Overlap\" is ambiguous about touching endpoints"
+  },
+  {
+    "key": "adv47-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 touching merge",
+    "core_issue": "[A] Example fails to disambiguate strict-vs-touching"
+  },
+  {
+    "key": "adv47-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 touching, Q6 extend-mechanism",
+    "core_issue": "[Pre] Process omits constraints on input validity (start"
+  },
+  {
+    "key": "adv48-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'Must output be a permutation of input?'",
+    "core_issue": "[O] No requirement that output contains the same"
+  },
+  {
+    "key": "adv48-B",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv48-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": false,
+    "reasoning": "PARTIAL \u2014 asks stability and sort order but not full permutation",
+    "core_issue": "[O] Process describes the algorithm but does not state"
+  },
+  {
+    "key": "adv49-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 sorted precondition",
+    "core_issue": "[Pre] Precondition that both inputs are sorted is omitted"
+  },
+  {
+    "key": "adv49-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 duplicates",
+    "core_issue": "[D] Example does not distinguish multiset union from set"
+  },
+  {
+    "key": "adv49-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q3 unsorted input precondition",
+    "core_issue": "[Pre] Process is correct only if both inputs are already"
+  },
+  {
+    "key": "adv50-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 merge vs set union",
+    "core_issue": "[D] Default reading of \"merge two sorted arrays\" is"
+  },
+  {
+    "key": "adv50-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 dedup confirmed by example",
+    "core_issue": "[D] Example resolves cross-array dedup but does not"
+  },
+  {
+    "key": "adv50-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 title/NL contradiction",
+    "core_issue": "[D] Process is the classical merge step, which yields a"
+  },
+  {
+    "key": "adv51-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 keep duplicates",
+    "core_issue": "[Pre] \"Sorted\" left unqualified between non-decreasing"
+  },
+  {
+    "key": "adv51-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 keep vs dedup",
+    "core_issue": "[D] Example uses disjoint duplicate-free inputs, fails"
+  },
+  {
+    "key": "adv51-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 input guaranteed non-decreasing precondition",
+    "core_issue": "[Pre] Process omits the precondition that inputs are"
+  },
+  {
+    "key": "adv52-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 missing elements",
+    "core_issue": "[Pre] Precondition that nums contains all of 1..k is"
+  },
+  {
+    "key": "adv52-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 missing elements",
+    "core_issue": "[Pre] Example clarifies counting rule but does not"
+  },
+  {
+    "key": "adv52-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 missing elements",
+    "core_issue": "[D] \"Collection\" is naturally a list/multiset; \"contains"
+  },
+  {
+    "key": "adv53-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q3 sentinel",
+    "core_issue": "[E] \"Say it can't be done\" doesn't specify the sentinel"
+  },
+  {
+    "key": "adv53-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 sorted definition, Q3 duplicates",
+    "core_issue": "[O] Example does not demonstrate the unsortable-case"
+  },
+  {
+    "key": "adv53-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 failure signal",
+    "core_issue": "[E] \"Return that it didn't work\" leaves the negative"
+  },
+  {
+    "key": "adv54-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 missing from what",
+    "core_issue": "[Pre] \"n\" (the range upper bound) and the"
+  },
+  {
+    "key": "adv54-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 n determination",
+    "core_issue": "[Pre] \"n\" definition (= length of list) is implicit;"
+  },
+  {
+    "key": "adv54-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 precondition",
+    "core_issue": "[Pre] Process is the Gauss-sum trick, which gives wrong"
+  },
+  {
+    "key": "adv55-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreak",
+    "core_issue": "[T] No tiebreaker specified when multiple values share the max frequency"
+  },
+  {
+    "key": "adv55-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreak",
+    "core_issue": "[T] Example does not exhibit a tie, so first-occurrence tiebreak is invisible"
+  },
+  {
+    "key": "adv55-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreak",
+    "core_issue": "[T] \"A number that has that count\" is existential, not deterministic"
+  },
+  {
+    "key": "adv56-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 order preservation",
+    "core_issue": "[O] Does not specify that non-zero elements must keep their relative order"
+  },
+  {
+    "key": "adv56-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 order",
+    "core_issue": "[O] Example fails to distinguish \"preserve relative order\" from \"sort then append\""
+  },
+  {
+    "key": "adv56-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv57-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 position semantics, Q2 subset",
+    "core_issue": "[Pre] No mention that nums1 is a subset of nums2 or that values are unique"
+  },
+  {
+    "key": "adv57-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": false,
+    "fixable": false,
+    "reasoning": "MISS \u2014 asks subset/unique/sentinel; does NOT ask strict-greater vs \u2265",
+    "core_issue": "[A] Example does not distinguish strict-greater from greater-or-equal"
+  },
+  {
+    "key": "adv57-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 sentinel collision, Q2 x not in nums2",
+    "core_issue": "[D] / [Pre] \"Find x\" implicit uniqueness and behaviour when x not present unspecified"
+  },
+  {
+    "key": "adv58-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 definition, Q3 indexing",
+    "core_issue": "[D] \"Ugly number\" definition has multiple variants; convention not fixed by NL"
+  },
+  {
+    "key": "adv58-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 1 is ugly, Q2 indexing",
+    "core_issue": "[E] n=0 boundary and 1-based indexing not stated; major definition variant ruled out by example"
+  },
+  {
+    "key": "adv58-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 indexing",
+    "core_issue": "[E] Boundary n=0 and indexing-base implicit; \"starting with 1\" pins the value but not the index"
+  },
+  {
+    "key": "adv59-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 title/NL conflict on preprocessing",
+    "core_issue": "[P] No mention of ignoring case or non-alphanumeric characters"
+  },
+  {
+    "key": "adv59-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 character filtering scope",
+    "core_issue": "[P] Example does not distinguish \"ignore spaces\" from \"ignore all non-alphanumeric\""
+  },
+  {
+    "key": "adv59-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv60-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 output order, Q2 element order",
+    "core_issue": "[O] Tuple component order and within-list ordering not specified"
+  },
+  {
+    "key": "adv60-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 output order, Q2 element order",
+    "core_issue": "[O] Example fails to distinguish \"preserve input order\" from \"sort each sublist\""
+  },
+  {
+    "key": "adv60-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv61-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 single-element",
+    "core_issue": "[E] Empty and single-element list behaviour unspecified; empty-product convention not stated"
+  },
+  {
+    "key": "adv61-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 single-element",
+    "core_issue": "[E] Example does not exercise zeros or length-1 boundary; division-based interpretation matches example perfectly"
+  },
+  {
+    "key": "adv61-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 division-by-zero, Q5 process fundamentally incorrect for zeros",
+    "core_issue": "[Pre] Process implies division \u2014 fails when input contains zero; does not match VERINA's no-division rule"
+  },
+  {
+    "key": "adv62-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 terrain undefined",
+    "core_issue": "[A] / [D] \"Terrain\" and \"rainwater\" geometry undefined \u2014 no formal water-trapping rule"
+  },
+  {
+    "key": "adv62-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 negatives",
+    "core_issue": "[Pre] / [E] Boundary inputs (empty, length < 3, negatives) not addressed; example anchors the standard rule"
+  },
+  {
+    "key": "adv62-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv63-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'unique = distinct (\u22651) or exactly-once'",
+    "core_issue": "[A] \"Unique\" has two valid interpretations (distinct values vs frequency-1 elements)"
+  },
+  {
+    "key": "adv63-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": false,
+    "fixable": false,
+    "reasoning": "MISS \u2014 asserts 'different numbers = distinct values' without probing the ambiguity",
+    "core_issue": "[A] Example fails to distinguish \"distinct count\" from \"max - min + 1\" (range size)"
+  },
+  {
+    "key": "adv63-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 unsorted input breaks procedure",
+    "core_issue": "[Pre] Sortedness assumption implicit; on unsorted input the process miscounts"
+  },
+  {
+    "key": "adv64-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 all vs first",
+    "core_issue": "[A] \"taken out\" is ambiguous between removing one occurrence vs all occurrences"
+  },
+  {
+    "key": "adv64-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 all vs first",
+    "core_issue": "[O] order constraint and duplicate handling not pinned down; the example is too clean to disambiguate"
+  },
+  {
+    "key": "adv64-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv65-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'flip backwards at what level? Character vs word'",
+    "core_issue": "[A] \"flip backwards\" is loose enough to admit multiple unit-of-reversal readings"
+  },
+  {
+    "key": "adv65-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 character-level vs word-level",
+    "core_issue": "[A] single-word ASCII example fails to separate character reversal from word reversal or sort-descending"
+  },
+  {
+    "key": "adv65-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv66-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q3-Q4 multiple/trailing spaces",
+    "core_issue": "[P] preprocessing (collapse multiple spaces, trim leading/trailing) not stated"
+  },
+  {
+    "key": "adv66-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "P",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 multiple spaces",
+    "core_issue": "[P] example uses single-space ASCII with no surrounding whitespace, so the whitespace-collapsing rule is invisible"
+  },
+  {
+    "key": "adv66-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 multiple spaces, Q2 leading/trailing",
+    "core_issue": "[D] \"split into words\" definition does not pin down what is and is not a separator; trim behavior unstated"
+  },
+  {
+    "key": "adv67-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 consecutive vs total count",
+    "core_issue": "[A] \"how many times it shows up\" ambiguous between consecutive runs vs total count"
+  },
+  {
+    "key": "adv67-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 RLE vs frequency, Q4 disambiguating 'abba'",
+    "core_issue": "[A] non-repeating-letter example collapses run-length encoding and frequency map onto the same output"
+  },
+  {
+    "key": "adv67-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv68-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 format, Q2 count-of-1",
+    "core_issue": "[Pre] no-digits-in-input precondition not stated; also the \"always include count even when 1\" convention is not pinned"
+  },
+  {
+    "key": "adv68-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 count-of-1, Q2 digit chars",
+    "core_issue": "[D] multi-digit count behavior not shown by example; count base also unspecified"
+  },
+  {
+    "key": "adv68-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q3 digit characters in input directly addresses precondition gap",
+    "core_issue": "[Pre] precondition that input contains no digit characters is not stated; \"the number\" representation also unspecified"
+  },
+  {
+    "key": "adv69-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1-Q2 duplicate target",
+    "core_issue": "[Pre] precondition (strict increasing, no duplicates) not stated; behavior on ties undefined"
+  },
+  {
+    "key": "adv69-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 duplicate target",
+    "core_issue": "[T] when target exists, the example does not distinguish \"return current index\" from \"return leftmost insertion\" from \"return count of strictly smaller elements\""
+  },
+  {
+    "key": "adv69-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv70-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 permutation, Q2 interaction",
+    "core_issue": "[Pre] precondition that input is a permutation of [1..n] not stated; \"biggest number\" reading diverges from \"n\""
+  },
+  {
+    "key": "adv70-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q4 crossing interaction explicitly identified",
+    "core_issue": "[E] example does not show the firstIndex > lastIndex crossing case where +1 correction is needed"
+  },
+  {
+    "key": "adv70-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 double-counting",
+    "core_issue": "[E] process omits the \"subtract 1 when 1 is right of n\" correction, producing wrong outputs on crossing configurations"
+  },
+  {
+    "key": "adv71-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreaker, Q2 not-found",
+    "core_issue": "[T] tiebreaker (lex-smallest when multiple shortest) and not-found behavior (return \"\") not stated"
+  },
+  {
+    "key": "adv71-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreaker",
+    "core_issue": "[T] tiebreaker and not-found behavior unspecified; example does not exhibit a real lex tie or a not-found case"
+  },
+  {
+    "key": "adv71-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 ties in length",
+    "core_issue": "[T] \"pick the one with the smallest length\" leaves the tiebreaker among equal-length minimums undefined"
+  },
+  {
+    "key": "adv72-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 n=0",
+    "core_issue": "[E] behavior at n=0 not specified \u2014 template returns 0 but mathematical convention says 2"
+  },
+  {
+    "key": "adv72-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 n=0",
+    "core_issue": "[E] n=0 and n=1 boundary behavior not exercised; mathematical-divides vs template-special-case ambiguity untouched"
+  },
+  {
+    "key": "adv72-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 n=0",
+    "core_issue": "[E] process does not address n = 0; \"divides evenly\" applies to 0 (2 divides 0 evenly) but the template special-cases 0 to 0"
+  },
+  {
+    "key": "adv73-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 start from 0 or 1",
+    "core_issue": "[D] \"smallest number not in the list\" without specifying the"
+  },
+  {
+    "key": "adv73-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "D",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 0-start vs 1-start",
+    "core_issue": "[D] \"first missing\" example fails to disambiguate between"
+  },
+  {
+    "key": "adv73-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 0-indexed vs 1-indexed",
+    "core_issue": "[Pre] Process implies 0-indexed positional match, which only"
+  },
+  {
+    "key": "adv74-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 contiguous, Q2 single-element",
+    "core_issue": "[A] \"Chunk\" is ambiguous between contiguous subarrays, all"
+  },
+  {
+    "key": "adv74-B",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv74-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 single-element subarrays",
+    "core_issue": "[O] \"Every pair of starting and ending indices\" does not"
+  },
+  {
+    "key": "adv75-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 empty chunk",
+    "core_issue": "[E] All-negative case: \"biggest sum from a chunk\" is ambiguous"
+  },
+  {
+    "key": "adv75-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "E",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 same as adv45-B",
+    "core_issue": "[E] Positive-answer example fails to disambiguate \"at least"
+  },
+  {
+    "key": "adv75-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 all-negative",
+    "core_issue": "[Pre] Process describes Kadane's algorithm correctly but does"
+  },
+  {
+    "key": "adv76-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreak",
+    "core_issue": "[T] No specification of behavior under frequency ties; NL"
+  },
+  {
+    "key": "adv76-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreak",
+    "core_issue": "[T] Example has no frequency tie, so tie-breaking rule is"
+  },
+  {
+    "key": "adv76-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 tiebreak, Q6 k-elements vs k-tiers",
+    "core_issue": "[O] Process does not state output ordering; \"take the k"
+  },
+  {
+    "key": "adv77-A",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv77-B",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv77-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  },
+  {
+    "key": "adv78-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 self-pairing, Q3 pair order",
+    "core_issue": "[Pre] No uniqueness/existence precondition; [O] no"
+  },
+  {
+    "key": "adv78-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 self-pairing, Q2 precondition",
+    "core_issue": "[A] \"the answer is (0,1)\" example fails to disambiguate"
+  },
+  {
+    "key": "adv78-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q3 enumeration order",
+    "core_issue": "[O] No specification of pair ordering inside the result;"
+  },
+  {
+    "key": "adv79-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 lex-first",
+    "core_issue": "[T] No tiebreaker rule when multiple valid pairs exist"
+  },
+  {
+    "key": "adv79-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "T",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 lex-first",
+    "core_issue": "[T] Examples cover existence/none but never demonstrate"
+  },
+  {
+    "key": "adv79-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1-Q2 confirm double-loop order = lex-first",
+    "core_issue": "[O] Process implies a specific scan order that happens"
+  },
+  {
+    "key": "adv80-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 sorted indices, Q4 self-reuse",
+    "core_issue": "[Pre] No uniqueness precondition; [O] no length/ordering"
+  },
+  {
+    "key": "adv80-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "O",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q4 sorted indices",
+    "core_issue": "[O] Example fails to demonstrate either the length-2"
+  },
+  {
+    "key": "adv80-C",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "Pre",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q2 precondition",
+    "core_issue": "[Pre] No precondition stated about input having a"
+  },
+  {
+    "key": "adv81-A",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'drop duplicates: keep-one vs remove-all'",
+    "core_issue": "[A] \"Drop the duplicates\" is ambiguous between"
+  },
+  {
+    "key": "adv81-B",
+    "baseline": "SHOULD NOT PASS",
+    "issue_type": "A",
+    "hit": true,
+    "fixable": true,
+    "reasoning": "FIX \u2014 Q1 'unique = distinct vs appearing-exactly-once'",
+    "core_issue": "[A] \"unique values\" inherits the same ambiguity as"
+  },
+  {
+    "key": "adv81-C",
+    "baseline": "SHOULD PASS",
+    "issue_type": "SP",
+    "hit": null,
+    "fixable": null,
+    "reasoning": "SHOULD PASS",
+    "core_issue": "N/A"
+  }
+]

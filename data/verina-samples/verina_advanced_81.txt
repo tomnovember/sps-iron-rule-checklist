@@ -1,0 +1,87 @@
+=== TASK: verina_advanced_81 ===
+
+SYSTEM: You are an expert in Lean 4 programming and theorem proving.
+Please generate a Lean 4 specification that constrains the program implementation using the template provided.
+The precondition should be as permissive as possible, and the postcondition should model a sound and complete relationship between input and output of the program based on the task description.
+The generated specification should:
+- Follow Lean 4 best practices and use appropriate Lean 4 syntax and features
+- DO NOT use Lean 3 syntax or features
+- DO NOT import Std or Init
+- Only use auxiliary definitions when you cannot express the precondition or postcondition in the main body
+- add @[reducible, simp] attribute to auxiliary definitions
+Hint:
+- Use a[i]! instead of a[i] when a is an array or a list when necessary
+
+=== Task Description ===
+-----Description-----
+Implement a Lean 4 function that, given a list of integers, removes all duplicates and returns the resulting list in ascending order.
+
+-----Input-----
+The input consists of a single list of integers:
+arr: A list of integers.
+
+-----Output-----
+The output is a list of integers:
+Returns a list containing the unique elements of the input, sorted in ascending order. The returned list must not contain any duplicates, and every element in the output must appear in the original input list.
+
+=== Precondition Description ===
+(derive from task description)
+
+=== Postcondition Description ===
+(derive from task description)
+
+=== Lean 4 Template (fill in the <<GENERATE>> sections) ===
+```lean4
+-- <<GENERATE: precond_aux (auxiliary definitions for precondition, empty if not needed)>>
+
+@[reducible, simp]
+def uniqueSorted_precond (arr : List Int) : Prop :=
+  -- <<GENERATE: precond>>
+
+def uniqueSorted (arr : List Int) (h_precond : uniqueSorted_precond (arr)) : List Int :=
+  let rec insert (x : Int) (sorted : List Int) : List Int :=
+    match sorted with
+    | [] =>
+      [x]
+    | head :: tail =>
+      if x <= head then
+        x :: head :: tail
+      else
+        head :: insert x tail
+  let rec insertionSort (xs : List Int) : List Int :=
+    match xs with
+    | [] =>
+      []
+    | h :: t =>
+      let sortedTail := insertionSort t
+      insert h sortedTail
+  let removeDups : List Int → List Int
+    | xs =>
+      let rec aux (remaining : List Int) (seen : List Int) (acc : List Int) : List Int :=
+        match remaining with
+        | [] =>
+          acc.reverse
+        | h :: t =>
+          if h ∈ seen then
+            aux t seen acc
+          else
+            aux t (h :: seen) (h :: acc)
+      aux xs [] []
+  insertionSort (removeDups arr)
+
+-- <<GENERATE: postcond_aux (auxiliary definitions for postcondition, empty if not needed)>>
+
+@[reducible, simp]
+def uniqueSorted_postcond (arr : List Int) (result: List Int) (h_precond : uniqueSorted_precond (arr)) : Prop :=
+  -- <<GENERATE: postcond>>
+
+```
+
+=== Your Output ===
+Please provide EXACTLY these five fields, each as a code block:
+
+1. **imports** (additional imports needed, or empty):
+2. **precond_aux** (auxiliary definitions for precondition, or empty):
+3. **precond** (the precondition body - just the Lean expression):
+4. **postcond_aux** (auxiliary definitions for postcondition, or empty):
+5. **postcond** (the postcondition body - just the Lean expression):

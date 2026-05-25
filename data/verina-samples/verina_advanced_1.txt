@@ -1,0 +1,81 @@
+=== TASK: verina_advanced_1 ===
+
+SYSTEM: You are an expert in Lean 4 programming and theorem proving.
+Please generate a Lean 4 specification that constrains the program implementation using the template provided.
+The precondition should be as permissive as possible, and the postcondition should model a sound and complete relationship between input and output of the program based on the task description.
+The generated specification should:
+- Follow Lean 4 best practices and use appropriate Lean 4 syntax and features
+- DO NOT use Lean 3 syntax or features
+- DO NOT import Std or Init
+- Only use auxiliary definitions when you cannot express the precondition or postcondition in the main body
+- add @[reducible, simp] attribute to auxiliary definitions
+Hint:
+- Use a[i]! instead of a[i] when a is an array or a list when necessary
+
+=== Task Description ===
+-----Description-----
+This task requires writing a Lean 4 function that finds the single number in a non-empty list of integers, where every element appears exactly twice except for one element that appears only once. The function 
+should return the integer that appears only once.
+
+-----Input-----
+The input is a non-empty list of integers:
+- nums: A list in which each integer appears exactly twice except for one element that appears only once.
+
+-----Output-----
+The output is a single integer:
+Returns the unique integer that appears exactly once in the list.
+
+=== Precondition Description ===
+(derive from task description)
+
+=== Postcondition Description ===
+(derive from task description)
+
+=== Lean 4 Template (fill in the <<GENERATE>> sections) ===
+```lean4
+-- solution auxiliary
+def filterlist (x : Int) (nums : List Int) : List Int :=
+  let rec aux (lst : List Int) : List Int :=
+    match lst with
+    | []      => []
+    | y :: ys => if y = x then y :: aux ys else aux ys
+  aux nums
+
+-- <<GENERATE: precond_aux (auxiliary definitions for precondition, empty if not needed)>>
+
+@[reducible, simp]
+def FindSingleNumber_precond (nums : List Int) : Prop :=
+  -- <<GENERATE: precond>>
+
+def FindSingleNumber (nums : List Int) (h_precond : FindSingleNumber_precond (nums)) : Int :=
+  let rec findUnique (remaining : List Int) : Int :=
+    match remaining with
+    | [] =>
+      0
+    | x :: xs =>
+      let filtered : List Int :=
+        filterlist x nums
+      let count : Nat :=
+        filtered.length
+      if count = 1 then
+        x
+      else
+        findUnique xs
+  findUnique nums
+
+-- <<GENERATE: postcond_aux (auxiliary definitions for postcondition, empty if not needed)>>
+
+@[reducible, simp]
+def FindSingleNumber_postcond (nums : List Int) (result: Int) (h_precond : FindSingleNumber_precond (nums)) : Prop :=
+  -- <<GENERATE: postcond>>
+
+```
+
+=== Your Output ===
+Please provide EXACTLY these five fields, each as a code block:
+
+1. **imports** (additional imports needed, or empty):
+2. **precond_aux** (auxiliary definitions for precondition, or empty):
+3. **precond** (the precondition body - just the Lean expression):
+4. **postcond_aux** (auxiliary definitions for postcondition, or empty):
+5. **postcond** (the postcondition body - just the Lean expression):
