@@ -34,12 +34,12 @@ Seven categories, each targeting a specific class of specification gap:
 
 ## Paper
 
-→ **[`paper.pdf`](paper.pdf)**
+→ **[Submission Paper (PDF)](Tang_Meng_The_Iron_Rule_Checklist_for_Specification_Elicitation.pdf)**
 
 ## Repository Structure
 
 ```
-├── paper.pdf                          # Submission paper
+├── Tang_Meng_The_Iron_Rule_Checklist_for_Specification_Elicitation.pdf  # Submission paper
 ├── iron-rule-checklist.md             # The checklist protocol (standalone)
 │
 ├── data/
